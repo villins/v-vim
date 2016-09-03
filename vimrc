@@ -62,6 +62,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-endwise'
 call vundle#end()
 
 " 检测文件类型
