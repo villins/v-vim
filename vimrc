@@ -1,0 +1,90 @@
+" 更改 leader
+let mapleader = ","
+" 关闭
+set nocompatible
+" 显示状态栏
+set laststatus=2
+" 显示光标当前位置
+set ruler
+" 高亮当前行
+set cursorline
+" 高亮当前列
+set cursorcolumn
+" 高亮显示搜索结果
+set hlsearch
+" 显示行号
+set number
+" 设置缩进
+set cindent
+" 用空格替换制表符
+set expandtab
+" 制表符占2空格
+set tabstop=2
+" 默认缩进两个空格
+set shiftwidth=2
+" 增量式搜索
+set incsearch
+" 匹配括号高亮
+set showmatch
+" 搜索忽略大小
+set ignorecase
+
+" 启动 vim 时关闭折叠代码
+set nofoldenable
+" 设置 undo 为 ctrl-z
+map <C-z> <Esc>u
+
+" vundle 环境设置
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'slim-template/vim-slim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mattn/emmet-vim'
+Plugin 'othree/html5.vim'
+Plugin 'luochen1990/rainbow'
+Plugin 'honza/vim-snippets'
+Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'plasticboy/vim-markdown'
+call vundle#end()
+
+" 检测文件类型
+filetype on
+filetype plugin on
+filetype indent on
+
+" NERDTree 配置
+nmap <F3> :NERDTreeToggle<cr>
+" 设置主题 
+syntax enable
+" 设置背景颜色
+set background=dark
+colorscheme molokai
+let g:molokai_original = 1
+" 启动 neocomplete
+let g:neocomplete#enable_at_startup = 1
+" 启动 rainbow
+let g:rainbow_active = 1
+" emmet 只启动 html/css 
+let g:user_emmet_install_global = 0
+" 启动 airline
+let g:airline#extensions#tabline#enabled = 1
+" 关闭 markdown 折叠
+let g:vim_markdown_folding_disabled = 1
+autocmd FileType html,css EmmetInstall
