@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -d "~/.vim/bundle/Vundle.vim" ]; then
-  rm -rf "~/.vim/bundle/Vundle.vim"
+  echo "Vundle already install..."
 else
   git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
