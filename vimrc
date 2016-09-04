@@ -71,6 +71,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-endwise'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Chiel92/vim-autoformat'
 call vundle#end()
 
 " 检测文件类型
@@ -80,6 +81,8 @@ filetype indent on
 
 " NERDTree 配置
 nmap <F3> :NERDTreeToggle<cr>
+" Autoformat 配置
+nmap <F5> :Autoformat<CR>
 " 设置主题
 syntax enable
 " 设置背景颜色
