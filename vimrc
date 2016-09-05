@@ -75,6 +75,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'nsf/gocode'
 call vundle#end()
 
 " 检测文件类型
@@ -103,6 +104,9 @@ let g:vim_markdown_folding_disabled = 1
 autocmd FileType html,css EmmetInstall
 " 配置 neocomplete
 let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#sources#omni#input_patterns = {
+  \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+  \}
 " 开启语法
 syntax on
 hi Visual term=reverse cterm=reverse guibg=Grey
