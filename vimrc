@@ -74,6 +74,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 
 " 检测文件类型
