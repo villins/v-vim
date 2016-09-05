@@ -100,3 +100,6 @@ let g:vim_markdown_folding_disabled = 1
 autocmd FileType html,css EmmetInstall
 " 配置 neocomplete
 let g:neocomplete#enable_at_startup = 1
+" 开启语法
+syntax on
+hi Visual term=reverse cterm=reverse guibg=Grey
