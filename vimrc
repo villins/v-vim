@@ -72,6 +72,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-endwise'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'scrooloose/nerdcommenter'
 call vundle#end()
 
 " 检测文件类型
