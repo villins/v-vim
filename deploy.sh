@@ -20,7 +20,7 @@ else
 fi
 
 if command -v go >/dev/null 2>&1; then
-  if [ -z $GOPATH ]; then
+  if [ -n "$GOPATH" ]; then
     go get -u github.com/nsf/gocode
   else
     echo "you have not set GOPATH!"
