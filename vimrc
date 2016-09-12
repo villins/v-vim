@@ -87,6 +87,7 @@ filetype indent on
 nmap <F3> :NERDTreeToggle<cr>
 " Autoformat 配置
 nmap <F5> :Autoformat<CR>
+nmap <F6> <Esc>:tabedit<CR>
 " 设置主题
 syntax enable
 " 设置背景颜色
@@ -101,6 +102,9 @@ let g:user_emmet_install_global = 0
 let g:airline#extensions#tabline#enabled = 1
 " 关闭 markdown 折叠
 let g:vim_markdown_folding_disabled = 1
+" 配置 ack 命令
+let g:ackprg="ack-grep -H --nocolor --nogroup --column -i log"
+let g:ackprg = 'ag --nogroup --nocolor --column'
 autocmd FileType html,css EmmetInstall
 " 配置 neocomplete
 let g:neocomplete#enable_at_startup = 1
