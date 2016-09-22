@@ -34,6 +34,15 @@ set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 set nofoldenable
 " 设置 undo 为 ctrl-z
 map <C-z> <Esc>u
+" 设置 tab 变换
+map <C-Tab> <Esc>gt
+map <C-S-Tab> <Esc>gT
+imap <C-Tab> <Esc>gt
+imap <C-S-Tab> <Esc>gT
+vmap <C-Tab> <Esc>gt
+vmap <C-S-Tab> <Esc>gT
+map H <Esc>gT
+map L <Esc>gt
 " Remove trailing whitespaces and ^M chars
 autocmd FileType c,ruby,cpp,java,go,php,javascript,python,rust,twig,xml,yml,sql autocmd BufWritePre <buffer> StripWhitespace
 " autocmd FileType go autocmd BufWritePre <buffer> Fmt
