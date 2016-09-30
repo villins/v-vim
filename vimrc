@@ -114,6 +114,14 @@ let g:vim_markdown_folding_disabled = 1
 " 配置 ack 命令
 let g:ackprg="ack-grep -H --nocolor --nogroup --column -i log"
 let g:ackprg = 'ag --nogroup --nocolor --column'
+" syntastic 配置
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 autocmd FileType html,css EmmetInstall
 " 配置 neocomplete
 let g:neocomplete#enable_at_startup = 1
