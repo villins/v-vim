@@ -114,6 +114,12 @@ let g:vim_markdown_folding_disabled = 1
 " 配置 ack 命令
 let g:ackprg="ack-grep -H --nocolor --nogroup --column -i log"
 let g:ackprg = 'ag --nogroup --nocolor --column'
+" 配置 ctrlp 命令
+let g:ctrlp_cmd='CtrlP :pwd'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " syntastic 配置
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
