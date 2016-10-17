@@ -49,6 +49,7 @@ autocmd FileType c,ruby,cpp,java,go,php,javascript,python,rust,twig,xml,yml,sql 
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd FileType ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 " vundle 环境设置
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -128,6 +129,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of'}
 autocmd FileType html,css EmmetInstall
 " 配置 neocomplete
 let g:neocomplete#enable_at_startup = 1
