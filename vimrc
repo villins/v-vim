@@ -28,6 +28,8 @@ set incsearch
 set showmatch
 " 搜索忽略大小写，但有一个或以上大写字母时仍大小写敏感
 set ignorecase smartcase
+" 设置支持鼠标
+set mouse=a
 " 编码设置
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 " 启动 vim 时关闭折叠代码
