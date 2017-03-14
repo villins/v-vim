@@ -103,8 +103,10 @@ nmap <F5> :Autoformat<CR>
 nmap <F6> <Esc>:tabedit<CR>
 " 设置主题
 syntax enable
+" 设置 nerdcommenter 注释多一个空格
+let NERDSpaceDelims=1
 " 设置背景颜色
-set background=dark
+"set background=dark
 colorscheme molokai
 let g:molokai_original = 1
 " 启动 rainbow
