@@ -1,5 +1,7 @@
 " 更改 leader
 let mapleader = ","
+" 可以使用 delete 键
+set backspace=indent,eol,start
 " 关闭
 set nocompatible
 " 显示状态栏
@@ -52,6 +54,8 @@ autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd FileType ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+" 设置 python 缩进
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 " vundle 环境设置
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -60,12 +64,17 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'python-mode/python-mode'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+" Plugin 'davidhalter/jedi-vim'
 Plugin 'tpope/vim-rails'
 Plugin 'slim-template/vim-slim'
 Plugin 'digitaltoad/vim-pug'
@@ -89,6 +98,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nsf/gocode'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " 检测文件类型
@@ -98,6 +108,8 @@ filetype indent on
 
 " NERDTree 配置
 nmap <F3> :NERDTreeToggle<cr>
+" 显示 dotfile
+" let NERDTreeShowHidden=1
 " Autoformat 配置
 nmap <F5> :Autoformat<CR>
 nmap <F6> <Esc>:tabedit<CR>
@@ -143,6 +155,8 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#sources#omni#input_patterns = {
   \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
   \}
+let g:pymode_rope = 0
+let g:pymode_folding = 0
 " 开启语法
 syntax on
 hi Visual term=reverse cterm=reverse guibg=Grey
