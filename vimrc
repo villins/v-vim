@@ -98,7 +98,12 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nsf/gocode'
+Plugin 'aklt/plantuml-syntax'
+Plugin 'scrooloose/vim-slumlord'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'posva/vim-vue'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 call vundle#end()
 
 " 检测文件类型
